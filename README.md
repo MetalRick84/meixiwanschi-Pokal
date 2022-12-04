@@ -1,5 +1,8 @@
 # MeixiWansch-Pokal
 
+## TuEs
++ Wireframes machen
+
 ## Chronik
 
 ### 4.12.2022 - Besprechung online
@@ -19,4 +22,4 @@ Wir brauchen 2 html-Dateien:
   * Punkte
   * Punkte gesamt
 
- 
+
