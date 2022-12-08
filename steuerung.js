@@ -33,6 +33,30 @@ function steuerungDurchNeigung(mapAttribut, mapDaempfung) {
 }
 
 /**
+ * Registriert Auswirkungen, wenn auf zielelement geclickt wird.
+ * @param {*} zielelement 
+ * @param {*} cbEventlistenerDown : übernimmt Mapping auf Attribut (zb actionButtonX = true) ==> kein mapObjekt notwendig. aktualisiereAttribut verwenden ==> dann kann auch Websocket eingebunden werden. 
+ * @param {*} cbEventlistenerUp : übernimmt Mapping auf Attribut (zb actionButtonX = false) ==> kein mapObjekt notwendig. aktualisiereAttribut verwenden ==> dann kann auch Websocket eingebunden werden. 
+ */
+function steuerungClick(zielelement, cbEventlistenerDown, cbEventlistenerUp) {
+
+}
+
+/**
+ * Registriert Auswirkungen, wenn zielelement gtoucht wird.
+ * @param {*} zielelement 
+ * @param {*} cbEventlistenerDown : übernimmt Mapping auf Attribut (zb actionButtonX = true) ==> kein mapObjekt notwendig. aktualisiereAttribut verwenden ==> dann kann auch Websocket eingebunden werden. 
+ * @param {*} cbEventlistenerUp : übernimmt Mapping auf Attribut (zb actionButtonX = false) ==> kein mapObjekt notwendig. aktualisiereAttribut verwenden ==> dann kann auch Websocket eingebunden werden. 
+ */
+ function steuerungClick(zielelement, cbEventlistenerDown, cbEventlistenerUp) {
+
+}
+
+/**
+ * 
+ */
+
+/**
  * Warhinweise 
  * @param {*} mapAttribut 
  */
