@@ -1,10 +1,4 @@
-/**
- * Crafty Component, der Steuerung eines Elements durch verschiedene Methoden (Neigung, Maus, etc) ermöglicht
- */
-Crafty.c('Steuerung', {
-    init: function() {console.log('Component Steuerung hinzugefügt')},
-    steuerungDurchNeigung: steuerungDurchNeigung,
-})
+// Steuerung eines Elements durch verschiedene Methoden (Neigung, Maus, etc) ermöglicht --> v.a. zur Verwendung in Crafty.js
 
 /**
  * Mach Element über Neigung steuerbar
@@ -55,3 +49,47 @@ function hinweiseMapAttribut(mapAttribut) {
         console.log('v wird gesteuert --> Motion-Component nicht vergessen')
     }
 }
+
+/**
+ * Überträgt values von objAttribute auf Entity,
+ * und führt danach cbNachUpdate aus (objAttribute und Entity als Parameter) zB senden Attibute an Websocket, ink sharedId und event)
+ * @param {*} objAttribute 
+ * @param {*} cbNachUpdate 
+ * @returns 
+ */
+function akualisiereAttribute(objAttribute, cbNachUpdate) {
+   return this;
+   // wenn websocket-Component registriert:
+   // Anm: sharedId wird von Websocket im BE vergeben, zB beim Registrieren von neuen Spielern, weil Crafty.js-Component-Ids auf verteilten Clients nicht zuverlässig übereintimmen können
+   // if (this.websocketRegistriert) {
+        // objAttribute.sharedId = this.shareId;
+        // objAttribute.evt = Websocket.EVENTS.aktualisiertAttribute;
+    // }
+}
+
+/**
+ * Wandelt mapAttribute in objAttribute um.
+ * keys für obj Attribute: values von mapAttribute.
+ * values für obj Attribute: entsprechende Attributwerte von Entity
+ * 
+ * @param {*} mapAttribute 
+ * @returns 
+ */
+function umwandleMapAttribute(mapAttribute) {
+    return objAttribute
+}
+
+/**
+ * Objekt zur Zusammenfassung der Funktionen.
+ * Ist so strukturiert, dass es direkt als Crafty-Component verwendet werden kann.
+ */
+const Steuerung = {
+    init: function() {console.log('Component Steuerung hinzugefügt')},
+    steuerungDurchNeigung,
+    akualisiereAttribute,
+}
+
+/**
+ * Crafty Component, der Steuerung eines Elements durch verschiedene Methoden (Neigung, Maus, etc) ermöglicht
+ */
+ if (Crafty) {Crafty.c('Steuerung', Steuerung);}
